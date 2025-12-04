@@ -14,7 +14,6 @@
   <meta name="theme-color" content="#005b92">
 
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
 
 </head>
 
@@ -22,43 +21,44 @@
     <header class="bg-gradient-to-r from-[#005b92] to-[#157e8f] text-white py-3 md:py-4 shadow sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-4">
 
-            <!-- Logo volta ao topo -->
+            <!-- Logo -->
             <a href="#">
                 <img src="img/logo-plasma.png" class="h-12 md:h-20 cursor-pointer transition-all duration-300 hover:scale-105">
             </a>
 
-            <!-- MENU DESKTOP -->
-            <nav class="hidden md:flex items-center space-x-6 text-lg font-semibold">
+            <nav class="hidden md:flex items-center space-x-8 text-lg font-medium">
+              <!-- LINKS -->
+              <a href="#" class="text-white/90 hover:text-white transition-colors duration-300">Empresa</a>
 
-                <a href="#" class="hover:text-gray-300 transition-all duration-300">Início</a>
+              <a href="#produtos" class="text-white/90 hover:text-white transition-colors duration-300">Produtos</a>
 
-                <a href="#produtos" class="hover:text-gray-300 transition-all duration-300">Produtos</a>
+              <a href="#marcas" class="text-white/90 hover:text-white transition-colors duration-300">Principais Marcas</a>
 
-                <!-- LOCALIZAÇÃO -->
-                <a href="https://www.google.com/maps/place/Rua+Gabriel+Pereira,+866"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-white text-[#157e8f] px-4 py-2 rounded-lg font-semibold shadow hover:bg-gray-200 transition-all duration-300">
+              <!-- CONTATOS -->
+              <div
+                  class="flex flex-col bg-white text-[#005b92] px-5 py-2.5 rounded-xl shadow-md
+                        hover:shadow-lg hover:bg-gray-100 transition-all duration-300 leading-tight space-y-1">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#157e8f]" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a1 1 0 01-.832-.445C7.12 14.66 4 10.68 4 8a6 6 0 1112 0c0 2.68-3.12 6.66-5.17 9.56A1 1 0 0110 18zm0-8a2 2 0 100-4 2 2 0 000 4z"/>
-                    </svg>
+                  <!-- E-MAIL -->
+                  <div class="flex items-center gap-2 text-sm font-semibold">
+                      <!-- Ícone Email -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#005b92]" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M2.94 6.34L10 11l7.06-4.66A2 2 0 0015.5 4h-11a2 2 0 00-1.56 2.34z"/>
+                          <path d="M18 8.12l-8 5.28-8-5.28V14a2 2 0 002 2h12a2 2 0 002-2V8.12z"/>
+                      </svg>
+                      plasmamateriaiseletricos@gmail.com
+                  </div>
 
-                    Localização
-                </a>
+                  <!-- WHATSAPP -->
+                  <div class="flex items-center gap-2 text-sm font-semibold">
+                      <!-- Ícone WhatsApp -->
+                      <img src="img/whatsapp.png" class="w-5 h-5 md:w-6 md:h-6 object-contain" alt="WhatsApp">
+                      (34) 99725-2791
+                  </div>
 
-                <!-- WHATSAPP usando IMG -->
-                <a href="https://wa.me/5534997252791"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-white text-[#005b92] px-4 py-2 rounded-lg font-semibold shadow hover:bg-gray-200 transition-all duration-300">
+              </div>
 
-                    <img src="img/whatsapp.png"
-                        class="w-5 h-5 md:w-6 md:h-6 object-contain"
-                        alt="WhatsApp">
-
-                    WhatsApp
-                </a>
-
-            </nav>
+          </nav>
 
             <!-- BOTÃO HAMBURGER -->
             <button id="menuBtn" class="hamburger md:hidden flex flex-col space-y-1.5">
@@ -71,42 +71,35 @@
 
         <!-- MENU MOBILE -->
         <nav id="mobileMenu"
-            class="menu-slide md:hidden bg-[#005b92] text-white px-6 py-0 space-y-4 text-lg font-semibold shadow-inner">
+            class="menu-slide md:hidden bg-[#005b92] text-white px-6 py-0 space-y-5 text-lg font-medium shadow-inner">
 
-            <a href="#" class="block hover:text-gray-300 transition-all duration-300">Início</a>
+            <a href="#" class="block hover:text-gray-300 transition-all duration-300">Empresa</a>
 
             <a href="#produtos" class="block hover:text-gray-300 transition-all duration-300">Produtos</a>
 
-            <!-- LOCALIZAÇÃO MOBILE -->
-            <a href="https://www.google.com/maps/place/Rua+Gabriel+Pereira,+866"
-            target="_blank"
-            class="flex items-center justify-center gap-2 bg-white text-[#157e8f] py-2 px-4 rounded-lg font-bold shadow hover:bg-gray-200 transition-all duration-300">
+            <a href="#marcas" class="block hover:text-gray-300 transition-all duration-300">Principais Marcas</a>
 
-                <svg class="w-5 h-5 text-[#157e8f]" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 18a1 1 0 01-.83-.45C7.12 14.66 4 10.68 4 8a6 6 0 1112 0c0 2.68-3.12 6.66-5.17 9.56A1 1 0 0110 18z"/>
-                </svg>
+            <div class="flex flex-col bg-white text-[#005b92] px-5 py-3 rounded-xl shadow-md hover:shadow-lg hover:bg-gray-100 transition-all duration-300 space-y-2">
+                <!-- E-MAIL -->
+                <div class="flex items-center gap-2 text-sm font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#005b92]" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.94 6.34L10 11l7.06-4.66A2 2 0 0015.5 4h-11a2 2 0 00-1.56 2.34z"/>
+                        <path d="M18 8.12l-8 5.28-8-5.28V14a2 2 0 002 2h12a2 2 0 002-2V8.12z"/>
+                    </svg>
+                    plasmamateriaiseletricos@gmail.com
+                </div>
 
-                Localização
-            </a>
-
-            <!-- WHATSAPP MOBILE usando IMG -->
-            <a href="https://wa.me/5534997252791"
-            target="_blank"
-            class="flex items-center justify-center gap-2 bg-white text-[#005b92] py-2 px-4 rounded-lg font-bold shadow hover:bg-gray-200 transition-all duration-300">
-
-                <img src="img/whatsapp.png"
-                    class="w-5 h-5 md:w-6 md:h-6 object-contain"
-                    alt="WhatsApp">
-
-                WhatsApp
-            </a>
-
+                <!-- WHATSAPP -->
+                <div class="flex items-center gap-2 text-sm font-semibold">
+                    <img src="img/whatsapp.png" class="w-5 h-5 object-contain" alt="WhatsApp">
+                    (34) 99725-2791
+                </div>
+            </div>
         </nav>
     </header>
 
-
   <!-- HERO -->
-  <section class="relative bg-gradient-to-r from-[#005b92] to-[#157e8f] text-white py-16 md:py-24 overflow-hidden">
+  <section id="empresa" class="relative bg-gradient-to-r from-[#005b92] to-[#157e8f] text-white py-16 md:py-24 overflow-hidden">
     <div class="relative max-w-6xl mx-auto px-4 text-center">
       <h2 class="text-3xl md:text-5xl font-bold mb-3 md:mb-4 drop-shadow-lg leading-tight">Seu parceiro em materiais elétricos</h2>
       <p class="text-base md:text-xl text-gray-200 mb-6 max-w-2xl mx-auto">Qualidade, segurança e confiança para sua obra.</p>
@@ -218,7 +211,7 @@
             Rua Gabriel Pereira, 866 — Patos de Minas
             </p>
 
-            <a href="https://www.google.com/maps/place/Rua+Gabriel+Pereira,+866"
+            <a href="https://www.google.com/maps/place/Plasma+Materiais+El%C3%A9tricos/@-18.570369,-46.5205985,17z/data=!3m1!4b1!4m6!3m5!1s0x94aef5f81601bc17:0x7d4c5e3f214697cb!8m2!3d-18.570369!4d-46.5205985!16s%2Fg%2F11y69bsrwz?entry=ttu&g_ep=EgoyMDI1MTEzMC4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             class="inline-flex items-center gap-2 bg-white text-[#157e8f] px-4 py-2 rounded-lg font-semibold shadow transition-all duration-300 hover:bg-gray-200">
 
@@ -247,6 +240,8 @@
         © 2025 Plasma Materiais Elétricos — Todos os direitos reservados
         </div>
     </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
