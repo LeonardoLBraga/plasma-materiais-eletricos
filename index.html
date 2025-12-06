@@ -6,6 +6,18 @@
   <title>Plasma Materiais Elétricos</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            large: "1070px",
+          }
+        }
+      }
+    }
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/whatsapp.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlemaps.js"></script>
 
@@ -18,21 +30,28 @@
 </head>
 
 <body class="bg-gray-100 text-gray-800">
-    <header class="bg-[#2a2a2a] text-white py-3 md:py-4 shadow sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex items-center justify-between px-4">
+  <header class="bg-[#2a2a2a] text-white py-3 large:py-4 shadow sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-4">
 
-            <!-- Logo -->
-            <a href="#">
-                <img src="img/logo-plasma.png" class="h-12 md:h-20 cursor-pointer transition-all duration-300 hover:scale-105">
-            </a>
+          <!-- Logo -->
+          <a href="#">
+              <img src="img/logo-plasma.png" class="h-12 large:h-20 cursor-pointer transition-all duration-300 hover:scale-105">
+          </a>
 
-            <nav class="hidden md:flex items-center space-x-8 text-lg font-medium">
+          <!-- MENU DESKTOP -->
+          <nav class="hidden large:flex items-center space-x-8 text-lg font-medium">
 
-              <a href="#quemsomos" class="text-white/90 hover:text-white transition-colors duration-300">Quem Somos</a>
+              <a href="#quemsomos" class="text-white/90 hover:text-white transition-colors duration-300">
+                  Quem Somos
+              </a>
 
-              <a href="#produtos" class="text-white/90 hover:text-white transition-colors duration-300">Produtos</a>
+              <a href="#produtos" class="text-white/90 hover:text-white transition-colors duration-300">
+                  Produtos
+              </a>
 
-              <a href="#marcas" class="text-white/90 hover:text-white transition-colors duration-300">Principais Marcas</a>
+              <a href="#marcas" class="text-white/90 hover:text-white transition-colors duration-300">
+                  Principais Marcas
+              </a>
 
               <!-- CONTATOS -->
               <div
@@ -41,7 +60,6 @@
 
                   <!-- E-MAIL -->
                   <div class="flex items-center gap-2 text-sm font-semibold">
-                      <!-- Ícone Email -->
                       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#005b92]" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M2.94 6.34L10 11l7.06-4.66A2 2 0 0015.5 4h-11a2 2 0 00-1.56 2.34z"/>
                           <path d="M18 8.12l-8 5.28-8-5.28V14a2 2 0 002 2h12a2 2 0 002-2V8.12z"/>
@@ -51,8 +69,7 @@
 
                   <!-- WHATSAPP -->
                   <div class="flex items-center gap-2 text-sm font-semibold">
-                      <!-- Ícone WhatsApp -->
-                      <img src="img/whatsapp.png" class="w-5 h-5 md:w-6 md:h-6 object-contain" alt="WhatsApp">
+                      <img src="img/whatsapp.png" class="w-5 h-5 large:w-6 large:h-6 object-contain" alt="WhatsApp">
                       (34) 99725-2791
                   </div>
 
@@ -60,43 +77,43 @@
 
           </nav>
 
-            <!-- BOTÃO HAMBURGER -->
-            <button id="menuBtn" class="hamburger md:hidden flex flex-col space-y-1.5">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+          <!-- BOTÃO MOBILE -->
+          <button id="menuBtn" class="hamburger large:hidden flex flex-col space-y-1.5">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
 
-        </div>
+      </div>
 
-        <!-- MENU MOBILE -->
-        <nav id="mobileMenu"
-            class="menu-slide md:hidden bg-[#2a2a2a] text-white px-6 py-0 space-y-5 text-lg font-medium shadow-inner">
+      <!-- MENU MOBILE -->
+      <nav id="mobileMenu"
+          class="menu-slide large:hidden bg-[#2a2a2a] text-white px-6 py-0 space-y-5 text-lg font-medium shadow-inner">
 
-            <a href="#quemsomos" class="block hover:text-gray-300 transition-all duration-300">Quem somos</a>
+          <a href="#quemsomos" class="block hover:text-gray-300 transition-all duration-300">Quem somos</a>
 
-            <a href="#produtos" class="block hover:text-gray-300 transition-all duration-300">Produtos</a>
+          <a href="#produtos" class="block hover:text-gray-300 transition-all duration-300">Produtos</a>
 
-            <a href="#marcas" class="block hover:text-gray-300 transition-all duration-300">Principais Marcas</a>
+          <a href="#marcas" class="block hover:text-gray-300 transition-all duration-300">Principais Marcas</a>
 
-            <div class="flex flex-col bg-white text-[#005b92] px-5 py-3 rounded-xl shadow-md hover:shadow-lg hover:bg-gray-100 transition-all duration-300 space-y-2">
-                <!-- E-MAIL -->
-                <div class="flex items-center gap-2 text-sm font-semibold">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#005b92]" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2.94 6.34L10 11l7.06-4.66A2 2 0 0015.5 4h-11a2 2 0 00-1.56 2.34z"/>
-                        <path d="M18 8.12l-8 5.28-8-5.28V14a2 2 0 002 2h12a2 2 0 002-2V8.12z"/>
-                    </svg>
-                    plasmamateriaiseletricos@gmail.com
-                </div>
+          <div class="flex flex-col bg-white text-[#005b92] px-5 py-3 rounded-xl shadow-md hover:shadow-lg hover:bg-gray-100 transition-all duration-300 space-y-2">
+              <!-- E-MAIL -->
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#005b92]" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2.94 6.34L10 11l7.06-4.66A2 2 0 0015.5 4h-11a2 2 0 00-1.56 2.34z"/>
+                      <path d="M18 8.12l-8 5.28-8-5.28V14a2 2 0 002 2h12a2 2 0 002-2V8.12z"/>
+                  </svg>
+                  plasmamateriaiseletricos@gmail.com
+              </div>
 
-                <!-- WHATSAPP -->
-                <div class="flex items-center gap-2 text-sm font-semibold">
-                    <img src="img/whatsapp.png" class="w-5 h-5 object-contain" alt="WhatsApp">
-                    (34) 99725-2791
-                </div>
-            </div>
-        </nav>
-    </header>
+              <!-- WHATSAPP -->
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                  <img src="img/whatsapp.png" class="w-5 h-5 object-contain" alt="WhatsApp">
+                  (34) 99725-2791
+              </div>
+          </div>
+      </nav>
+  </header>
 
   <!-- HERO -->
   <section id="hero" class="relative bg-[#005b92] text-white py-16 md:py-22 overflow-hidden">
@@ -124,21 +141,34 @@
   </section>
 
   <!-- Seção de destaque - Quem somos -->
-  <section id="quemsomos" class="scroll-mt-28 max-w-6xl mx-auto px-4 py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
-    <div>
-      <h3 class="text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-[#005b92]">Quem Somos </h3>
-      <p class="text-gray-700 text-justify leading-relaxed mb-4">
-        A Plasma é uma empresa do setor elétrico sediada em Patos de Minas – MG, dedicada a oferecer soluções completas
-        em materiais elétricos com qualidade, segurança e confiabilidade. Trabalhamos com atendimento especializado e suporte técnico para garantir praticidade e tranquilidade
-        aos nossos clientes.
-      </p>
-      <p class="text-gray-700 text-justify leading-relaxed mb-4">
-        Estamos em constante evolução: buscamos novas referências no mercado, ampliamos e atualizamos nosso portfólio regularmente, além de aprimorarmos nossos processos para entregar
-        sempre o melhor para sua obra. Atuamos com honestidade, compromisso e respeito, construindo parcerias sólidas e duradouras.
-      </p>
-    </div>
-    <div class="flex justify-center">
-      <img src="img/fachada.jpg" class="rounded-xl shadow-xl max-w-full h-auto md:max-w-md" alt="Fachada Plasma" />
+  <section id="quemsomos" class="scroll-mt-28 bg-gray-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4"> <!-- ADICIONADO PARA ALINHAR COM PRODUTOS -->
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+        <!-- TEXTO -->
+        <div class="text-center lg:text-left lg:pl-10"> <!-- padding só no desktop -->
+
+          <h3 class="text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-[#005b92]">Quem Somos</h3>
+
+          <p class="text-gray-700 text-justify leading-relaxed mb-4">
+            A Plasma é uma empresa do setor elétrico sediada em Patos de Minas – MG, dedicada a oferecer soluções completas
+            em materiais elétricos com qualidade, segurança e confiabilidade. Trabalhamos com atendimento especializado e suporte técnico para garantir praticidade e tranquilidade aos nossos clientes.
+          </p>
+
+          <p class="text-gray-700 text-justify leading-relaxed mb-4">
+            Estamos em constante evolução: buscamos novas referências no mercado, ampliamos e atualizamos nosso portfólio regularmente, além de aprimorarmos nossos processos para entregar sempre o melhor para sua obra. Atuamos com honestidade, compromisso e respeito, construindo parcerias sólidas e duradouras.
+          </p>
+
+        </div>
+
+        <!-- IMAGEM -->
+        <div class="flex justify-center relative">
+          <img src="img/fachada.jpg" class="rounded-xl shadow-xl max-w-full h-auto md:max-w-md" alt="Fachada Plasma" />
+        </div>
+
+      </div>
+
     </div>
   </section>
 
@@ -156,17 +186,17 @@
         <div class="text-center lg:text-left order-1 lg:order-2">
           <h4 class="text-3xl font-bold text-[#005b92] mb-4">Produtos</h4>
 
-          <p class="text-gray-700 text-justify text-lg leading-relaxed max-w-lg mb-4">
+          <p class="text-gray-700 text-justify leading-relaxed mb-4">
             Oferecemos uma seleção completa de materiais elétricos projetados para garantir instalações seguras, eficientes e com longa durabilidade.
             Cada item do nosso catálogo é selecionado com rigor para garantir o melhor desempenho, alta resistência e performance máxima.
           </p>
 
-          <p class="text-gray-700 text-justify text-lg leading-relaxed max-w-lg mb-4">
+          <p class="text-gray-700 text-justify leading-relaxed mb-4">
             Trabalhamos com diversas linhas de produtos: cabos elétricos, tomadas e interruptores, soluções em iluminação, ferramentas profissionais,
             dispositivos de proteção (como disjuntores, DRs e DPS), materiais para infraestrutura leve e pesada, dentre muitos outros.
           </p>
 
-          <p class="text-gray-700 text-justify text-lg leading-relaxed max-w-lg">
+          <p class="text-gray-700 text-justify leading-relaxed mb-4">
             Todos os produtos que comercializamos são homologados e seguem as normas técnicas vigentes, garantindo segurança e qualidade em cada etapa da sua obra ou projeto.
           </p>
         </div>
@@ -223,7 +253,7 @@
 
   <!-- Footer -->
     <footer class="bg-[#2a2a2a] text-white py-12 mt-10">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 large:grid-cols-4 gap-10">
 
         <!-- Redes sociais -->
         <div>
