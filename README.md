@@ -52,7 +52,7 @@ plasma-materiais-eletricos/
 
 - **Site oficial:** https://plasmateriais.com.br
 - **Repositório GitHub:** https://github.com/LeonardoLBraga/plasma-materiais-eletricos
-- **Deploy Vercel:** https://plasma-materiais-eletricos.vercel.app
+- **Deploy Vercel:** https://plasma-materiais-eletricos.vercel.app (por enquanto deixei funcionando só no oficial )
 
 ## 📄 Licença
 
